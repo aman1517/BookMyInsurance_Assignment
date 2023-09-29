@@ -3,6 +3,18 @@
   background-color: 
   #292d63;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100%;
+}
+
+.card {
+  width: 18rem;
+}
 
 
 @media (prefers-reduced-motion: no-preference) {

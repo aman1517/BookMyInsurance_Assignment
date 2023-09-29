@@ -10,12 +10,20 @@ const Home = () => {
   const [carError, setCarError] = useState(false);
   const [isLoading, setisLoading] = useState(false);
   const [iserror, setisError] = useState(false);
+  let localData = {
+    carError,
+    data,
+    iserror,
+    isLoading,
+  };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    localStorage.setItem("localSData", JSON.stringify(localData));
+  }, [data]);
 
   const getCarDetails = (Car_No) => {
     setisLoading(true);
-    fetch(`https://6322fad1362b0d4e7dd81cf0.mockapi.io/users?name=${Car_No}`)
+    fetch(`https://6322fad1362b0d4e7dd81cf0.mockapi.io/users?car_no=${Car_No}`)
       .then((res) => res.json())
       .then((res) => {
         setDate(res);
@@ -26,6 +34,7 @@ const Home = () => {
       })
       .finally((res) => {
         setisLoading(false);
+
         window.open("/carDetails", "_blank");
       });
   };
@@ -35,18 +44,11 @@ const Home = () => {
     if (carData.length < 4) {
       setCarError(true);
     } else {
-      console.log(val);
+      console.log("fshdfjhdsfhjkdshjfksdhjfhdjks");
 
       setCarData("");
 
       getCarDetails(val);
-      let localData = {
-        carError,
-        data,
-        iserror,
-        isLoading,
-      };
-      localStorage.setItem("localSData", JSON.stringify(localData));
     }
   };
   const myStyle = {

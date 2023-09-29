@@ -24,7 +24,7 @@ const Navbar = () => {
         <Link to="/" style={{ color: "white", border: "none" }}>
           Home
         </Link>
-        <Link to="/car">Car Details</Link>
+        <Link to="/carDetails">Car Details</Link>
         <Link to="/insurace">Incorance</Link>
       </div>
     </div>
