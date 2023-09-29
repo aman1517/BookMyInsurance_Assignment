@@ -14,6 +14,7 @@ const Navbar = () => {
           backgroundColor: "#292d63",
           color: "white",
           display: "flex",
+          paddingTop: "10px",
           justifyContent: "space-around",
         }}
       >

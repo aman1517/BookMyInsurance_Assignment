@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../Style/Home.css";
-import { useNavigate } from "react-router-dom";
+import TypingAnimation from "../Components/TypingAnimation";
 
 const Home = () => {
-  const navigate = useNavigate();
-
   const [data, setDate] = useState([]);
   const [carData, setCarData] = useState("");
   const [carError, setCarError] = useState(false);
@@ -27,14 +25,12 @@ const Home = () => {
       .then((res) => res.json())
       .then((res) => {
         setDate(res);
-        console.log(res, "res");
       })
       .catch((err) => {
         setisError(true);
       })
       .finally((res) => {
         setisLoading(false);
-
         window.open("/carDetails", "_blank");
       });
   };
@@ -44,10 +40,7 @@ const Home = () => {
     if (carData.length < 4) {
       setCarError(true);
     } else {
-      console.log("fshdfjhdsfhjkdshjfksdhjfhdjks");
-
       setCarData("");
-
       getCarDetails(val);
     }
   };
@@ -60,23 +53,24 @@ const Home = () => {
   return (
     <div>
       {isLoading ? (
-        <div>
+        <div className="col-md-6 offset-md-3 text-center text-white mt-5 ">
           <img
-            src="https://media.istockphoto.com/id/1302436594/video/loading-circle-icon-animation-on-white-background-4k-video-loopable-preloader.jpg?s=640x640&k=20&c=JQzv8UsXNfUnqQSULYW8B858UOM2O5CoXRgG9a0hRFk="
+            src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Youtube_loading_symbol_1_(wobbly).gif"
             about="loading_igm"
+            alt="lading....."
+            style={{ borderRadius: "20px" }}
           />
+          <h3>Loading.....</h3>
         </div>
       ) : (
-        <div className="container mt-5">
+        <div
+          className="container mt-5 col-md-6 offset-md-3
+                            text-center "
+        >
+          <TypingAnimation text="Sahi Milega, Yahi Milega |" speed={200} />
           <div className="d-flex justify-content-center mb-5">
             <div style={myStyle}>
-              <i class="fa fa-car fs-1 mr-5 " aria-hidden="true"></i>
-            </div>
-            <div style={myStyle}>
-              <i class="fa fa-car fs-1 mr-5" aria-hidden="true"></i>
-            </div>
-            <div style={myStyle}>
-              <i class="fa fa-car fs-1" aria-hidden="true"></i>
+              <i className="fa fa-car fs-1 mr-5 " aria-hidden="true"></i>
             </div>
           </div>
 
@@ -101,6 +95,24 @@ const Home = () => {
               {carError && (
                 <p className="text-danger">Fill the Proper Number</p>
               )}
+            </div>
+          </div>
+          <div
+            className=" d-flex justify-content-center align-items-center border mt-5 shadow rounded"
+            style={{ backgroundColor: "#1f224b" }}
+          >
+            <div className="col-md-12  d-flex text-white p-3 ">
+              <i className="fa fa-car fs-1" aria-hidden="true"></i>
+              <h2 className="mr-3">Brand New Car?</h2>
+            </div>
+          </div>
+          <div
+            className=" d-flex justify-content-center align-items-center border mt-5 shadow rounded"
+            style={{ backgroundColor: "#1f224b" }}
+          >
+            <div className="col-md-12  d-flex text-white p-3 ">
+              <i className="fa fa-car fs-1 " aria-hidden="true"></i>
+              <h2 className="mr-3">Renew your policy</h2>
             </div>
           </div>
         </div>
