@@ -17,7 +17,7 @@ This project built by one person executed in 2 days.
 - Payment Page
 
  
-  !([image link](https://ibb.co/ZGD9SgW))
+![Screenshot (115)](https://github.com/aman1517/BookMyInsurance_Assignment/assets/96099656/16a0eb57-230f-4869-affa-1a0041756f60)
   
   
    ![Car Details](https://drive.google.com/file/d/1zjiTpi0lKXzcFM0YWttC6-vMfS9JBheo/view?usp=sharing)
