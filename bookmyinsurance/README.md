@@ -1,3 +1,23 @@
+# BookMyInsurance
+
+In this project featching the car details by RC number.
+This project built by one person executed in 2 days.
+
+
+## Built with
+- React.js
+- JavaScript
+- CSS
+- Bootstrap
+- Mock API
+## Created Pages
+
+- Home Page
+- Car Details Page
+- Payment Page
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
