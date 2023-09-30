@@ -17,7 +17,7 @@ This project built by one person executed in 2 days.
 - Payment Page
 
  
-  ![Alt text]([image link](https://ibb.co/ZGD9SgW))
+  !([image link](https://ibb.co/ZGD9SgW))
   
   
    ![Car Details](https://drive.google.com/file/d/1zjiTpi0lKXzcFM0YWttC6-vMfS9JBheo/view?usp=sharing)
