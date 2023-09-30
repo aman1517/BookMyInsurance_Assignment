@@ -20,7 +20,7 @@ This project built by one person executed in 2 days.
 ![Screenshot (115)](https://github.com/aman1517/BookMyInsurance_Assignment/assets/96099656/16a0eb57-230f-4869-affa-1a0041756f60)
   
   
-   ![Car Details](https://drive.google.com/file/d/1zjiTpi0lKXzcFM0YWttC6-vMfS9JBheo/view?usp=sharing)
+  ![Screenshot (116)](https://github.com/aman1517/BookMyInsurance_Assignment/assets/96099656/c7446341-4433-45a0-b4d1-138b7ad6a26a)
 
    ![Cart](https://drive.google.com/file/d/1e4JA1tQrUD5U9nzBnprKoCbIPmbvLxAL/view?usp=sharing)
   
