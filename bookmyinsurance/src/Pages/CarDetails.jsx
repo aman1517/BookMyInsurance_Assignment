@@ -11,13 +11,13 @@ const policyQuotes = [
   },
   {
     id: 2,
-    vendor: "HDFC ERGO",
+    vendor: "National Insurance",
     image: "https://static.pbcdn.in/car-cdn/car2.0/insurer/6.png",
     quote: "$600",
   },
   {
     id: 3,
-    vendor: "National Insurance",
+    vendor: " HDFC ERGO",
     image: "https://static.pbcdn.in/car-cdn/car2.0/insurer/13.png",
     quote: "$600",
   },
@@ -33,7 +33,6 @@ const policyQuotes = [
 const CarDetails = () => {
   const navigate = useNavigate();
   let data = JSON.parse(localStorage.getItem("localSData"));
-  console.log(data?.data, "datadatadata");
 
   function HandleChek(e) {
     let obj = {
@@ -47,11 +46,11 @@ const CarDetails = () => {
   }
 
   return (
-    <div>
+    <div className="mt-5">
       {data?.data?.length > 0 ? (
         <div>
           <div className="container d-flex align-items-center justify-content-center ">
-            <div className="card text-center">
+            <div className="card text-center" key={data.data[0]?.id}>
               <img
                 src={data?.data[0]?.img}
                 className="card-img-top"
@@ -82,6 +81,7 @@ const CarDetails = () => {
                     className="container col-md-6 offset-md-3
                             text-center  d-flex  justify-content-between  border mt-5 text-white  shadow rounded pt-3"
                     style={{ backgroundColor: "#1f224b", height: "100px" }}
+                    key={e.id}
                   >
                     <img
                       src={e.image}
@@ -92,7 +92,7 @@ const CarDetails = () => {
                     <p> IDV Cover:{e.quote}</p>
                     <button
                       type="button"
-                      class="btn btn-primary"
+                      className="btn btn-primary"
                       style={{ height: "55%" }}
                       onClick={() => HandleChek(e)}
                     >

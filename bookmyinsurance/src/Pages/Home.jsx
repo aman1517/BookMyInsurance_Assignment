@@ -8,14 +8,13 @@ const Home = () => {
   const [carError, setCarError] = useState(false);
   const [isLoading, setisLoading] = useState(false);
   const [iserror, setisError] = useState(false);
-  let localData = {
-    carError,
-    data,
-    iserror,
-    isLoading,
-  };
 
   useEffect(() => {
+    let localData = {
+      data,
+      iserror,
+      isLoading,
+    };
     localStorage.setItem("localSData", JSON.stringify(localData));
   }, [data]);
 
@@ -36,8 +35,8 @@ const Home = () => {
   };
 
   const HandleSearch = () => {
-    let val = carData.split(" ").join(" ");
-    if (carData.length < 4) {
+    let val = carData.split(" ").join("");
+    if (carData.length < 6) {
       setCarError(true);
     } else {
       setCarData("");
@@ -80,7 +79,7 @@ const Home = () => {
                 <i className="fa fa-search"></i>
                 <input
                   type="text"
-                  value={carData}
+                  value={carData.toUpperCase()}
                   onChange={(e) => {
                     setCarData(e.target.value);
                     setCarError(false);
@@ -102,8 +101,12 @@ const Home = () => {
             style={{ backgroundColor: "#1f224b" }}
           >
             <div className="col-md-12  d-flex text-white p-3 ">
-              <i className="fa fa-car fs-1" aria-hidden="true"></i>
-              <h2 className="mr-3">Brand New Car?</h2>
+              <i
+                className="fa fa-car fs-1"
+                aria-hidden="true"
+                style={{ marginRight: "5px", color: "burlywood" }}
+              ></i>
+              <h3 className="mr-3">Brand New Car?</h3>
             </div>
           </div>
           <div
@@ -111,8 +114,12 @@ const Home = () => {
             style={{ backgroundColor: "#1f224b" }}
           >
             <div className="col-md-12  d-flex text-white p-3 ">
-              <i className="fa fa-car fs-1 " aria-hidden="true"></i>
-              <h2 className="mr-3">Renew your policy</h2>
+              <i
+                className="fa fa-car fs-1 "
+                aria-hidden="true"
+                style={{ marginRight: "5px", color: "burlywood" }}
+              ></i>
+              <h3 className="mr-3">Renew your policy</h3>
             </div>
           </div>
         </div>

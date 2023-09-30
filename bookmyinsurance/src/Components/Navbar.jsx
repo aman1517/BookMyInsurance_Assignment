@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const style = {
-    color: "white",
-  };
+  const navigate = useNavigate();
+
   return (
     <div>
       <div
@@ -21,12 +21,18 @@ const Navbar = () => {
         <img
           src="https://bookmyinsurance.com/static/media/bmilogo.17a9b8f2.png"
           alt="logo"
+          style={{ cursor: "pointer" }}
+          onClick={() => navigate("/")}
         />
         <Link to="/" style={{ color: "white", border: "none" }}>
           Home
         </Link>
-        <Link to="/carDetails">Car Details</Link>
-        <Link to="/insurace">Incorance</Link>
+        <Link to="/carDetails" style={{ color: "white", border: "none" }}>
+          Car Details
+        </Link>
+        <Link to="/insurace" style={{ color: "white", border: "none" }}>
+          Cart
+        </Link>
       </div>
     </div>
   );
